@@ -13,4 +13,18 @@ body{
     background: var(--background-color);
     color: var(--text-color);
 }
-
+.header{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo img{
+    width: 80px;
+}
