@@ -9,9 +9,15 @@
     --text-color:#555;
     --title-color:#000;
 }
+.dark-theme{
+    --background-color:#000;
+    --text-color:#999;
+    --title-color:#fff;
+}
 body{
     background: var(--background-color);
     color: var(--text-color);
+    transition: background 0.8s,color 0.8s;
 }
 .header{
     width: 100%;
@@ -57,4 +63,69 @@ nav ul li a{
 .toggle-btn img{
     width: 25px;
     margin-left: 10px;
+}
+.content{
+    margin-top: 10%;
+    max-width: 600px;
+}
+.content h1{
+    font-size: 80px;
+    font-family: serif;
+    color: var(--title-color);
+    font-weight: 600;
+}
+.content h1 span{
+    font-family: serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.content a{
+    background: #4864ff;
+    color: #fff;
+    padding: 15px 70px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+}
+.image-box img{
+    width: 400px;
+    display: block;
+}
+.image-box{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.pattern{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    transform: rotate(40deg);
+    z-index: -1;
+}
+.pattern img{
+    width: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: move 1s linear infinite alternate-reverse;
+}
+.pattern img:nth-child(1){
+    transform: rotate(-45deg) translate(-70px,-50px);
+    animation-delay: 0.5s;
+}
+.pattern img:nth-child(2){
+    transform: rotate(65deg) translate(0px,-40px) scale(.8);
+    animation-delay: 1.5s;
+}
+
+@keyframes move{
+    100%{
+        margin-left: 40px;
+        margin-top: 20px;
+        opacity: 0.3;
+    }
 }
